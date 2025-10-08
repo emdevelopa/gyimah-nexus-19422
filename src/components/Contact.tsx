@@ -114,7 +114,7 @@ export const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <Card className="p-8 bg-card border-primary/20 card-3d">
+          {/* <Card className="p-8 bg-card border-primary/20 card-3d">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="name">Name</Label>
@@ -166,7 +166,7 @@ export const Contact = () => {
                 <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </form>
-          </Card>
+          </Card> */}
         </div>
       </div>
     </section>
