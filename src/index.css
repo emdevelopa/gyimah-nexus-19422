@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Futuristic Blue/Black Theme */
+    --background: 240 10% 3.9%;
+    --foreground: 210 100% 95%;
+
+    --card: 240 10% 6%;
+    --card-foreground: 210 100% 95%;
+
+    --popover: 240 10% 6%;
+    --popover-foreground: 210 100% 95%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 210 100% 98%;
+    --primary-glow: 195 100% 50%;
+
+    --secondary: 240 15% 15%;
+    --secondary-foreground: 210 100% 95%;
+
+    --muted: 240 10% 20%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 195 100% 50%;
+    --accent-foreground: 240 10% 3.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 15% 15%;
+    --input: 240 15% 15%;
+    --ring: 210 100% 50%;
+
+    --radius: 0.75rem;
+    
+    /* Custom gradients */
+    --gradient-holographic: linear-gradient(135deg, hsl(210 100% 50%) 0%, hsl(195 100% 50%) 50%, hsl(270 100% 50%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 50%) 0%, hsl(195 100% 50%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(240 10% 3.9%) 0%, hsl(240 15% 8%) 100%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(210 100% 50% / 0.4);
+    --shadow-glow-strong: 0 0 60px hsl(210 100% 50% / 0.6);
+    --shadow-card: 0 10px 40px hsl(240 10% 0% / 0.5);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Keep same as root for consistent futuristic theme */
+    --background: 240 10% 3.9%;
+    --foreground: 210 100% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+  }
+}
+
+@layer components {
+  .holographic-text {
+    background: var(--gradient-holographic);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .glow-effect-strong {
+    box-shadow: var(--shadow-glow-strong);
+  }
+  
+  .card-3d {
+    transform-style: preserve-3d;
+    transition: var(--transition-smooth);
+  }
+  
+  .card-3d:hover {
+    transform: translateY(-10px) rotateX(5deg);
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-glow-pulse {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes glow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(210 100% 50% / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(210 100% 50% / 0.6);
+    }
+  }
+}
