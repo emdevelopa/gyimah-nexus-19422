@@ -42,7 +42,7 @@ export const Contact = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-1 gap-12">
           {/* Contact Info */}
           <div className="space-y-6">
             <Card className="p-6 bg-card border-primary/20 hover:border-primary/50 transition-all">
