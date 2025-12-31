@@ -148,10 +148,10 @@ export const Projects = () => {
                         </span>
                       ))}
                     </div>
-                    <Button variant="outline" className="w-fit border-accent/50 hover:bg-accent/10 group">
+                   {* <Button variant="outline" className="w-fit border-accent/50 hover:bg-accent/10 group">
                       View Details
                       <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
+                    </Button>*}
                   </div>
                 </div>
               </Card>
